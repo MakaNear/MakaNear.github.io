@@ -7,24 +7,23 @@
     height: auto;
     padding: v.$padding-vertical-main v.$padding-horizontal-main;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 18vw 1fr 18vw;
 
     &-logo {
-      display: grid;
-      place-items: center;
-      gap: 0.3vw;
+      @include m.flex($justify: flex-start);
+      gap: 0.6vw;
       text-decoration: none;
 
       img {
-        width: 6vw;
+        width: 3vw;
         height: auto;
         object-fit: cover;
       }
 
       span {
-        font-family: v.$grandstander;
-        font-size: 2.15vw;
-        font-weight: 200;
+        font-family: v.$poppins;
+        font-size: 2.4vw;
+        font-weight: 500;
         color: map-get($map: v.$color, $key: "dark-gray");
         text-transform: uppercase;
       }

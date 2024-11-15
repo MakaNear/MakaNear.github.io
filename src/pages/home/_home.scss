@@ -1,3 +1,9 @@
 @use "../../helpers/mixins" as m;
 @use "../../helpers/variables" as v;
+@use "./map/map" as map;
 
+.home {
+  &-map {
+    @include map.map();
+  }
+}
