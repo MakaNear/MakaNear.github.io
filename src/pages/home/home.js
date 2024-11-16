@@ -1,13 +1,11 @@
-import loadComponent from "/src/helpers/loadComponent.js";
-import { smoothScroll } from "/src/helpers/smoothScroll.js";
-import { navbar } from "/src/components/navbar/navbar.js";
-import { url } from "/src/helpers/urlConfig.js";
-import { displayMap } from "/src/pages/home/map/map.js";
+import loadComponent from "../../helpers/loadComponent.js";
+import { smoothScroll } from "../../helpers/smoothScroll.js";
+import { navbar } from "../../components/navbar/navbar.js";
+import { url } from "../../helpers/urlConfig.js";
 
 export async function main() {
   const promises = [
     loadComponent("header.navbar", url.components.navbar + "navbar.html"),
-    loadComponent(".home .home-map"),
     loadComponent("footer.footer", url.components.footer + "footer.html"),
   ];
 
@@ -15,7 +13,6 @@ export async function main() {
     .then(() => {
       smoothScroll();
       navbar();
-      displayMap();
     })
     .catch((error) => {
       console.error("Error loading components:", error);
