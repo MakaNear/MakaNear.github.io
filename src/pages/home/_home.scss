@@ -1,5 +1,21 @@
 @use "../../helpers/mixins" as m;
 @use "../../helpers/variables" as v;
 
+@use "./partner/partner" as partner;
+@use "./hero/home" as hero;
+@use "./topdestinasi/topdestinasi" as destinasi;
+
 .home {
+  padding: v.$padding-horizontal-main;
+
+  .hero {
+    @include hero.hero();
+  }
+  .partner {
+    @include partner.partners();
+  }
+
+  .destinasi{
+    @include destinasi.destinasi();
+  }
 }
