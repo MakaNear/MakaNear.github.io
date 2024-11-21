@@ -8,8 +8,9 @@ export async function main() {
   const promises = [
     loadComponent("header.navbar", url.components.navbar + "navbar.html"),
     loadComponent(".home .hero", url.pages.home + "hero/hero.html"),
-    loadComponent(".home .destinasi", url.pages.home + "topdestinasi/topdestinasi.html"),
+    loadComponent(".home .benefit", url.pages.home + "benefit/benefit.html"),
     loadComponent(".home .partner", url.pages.home + "partner/partner.html"),
+    loadComponent(".home .kontak", url.pages.home + "kontak/kontak.html"),
     loadComponent("footer.footer", url.components.footer + "footer.html"),
   ];
 

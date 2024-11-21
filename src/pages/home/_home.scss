@@ -3,10 +3,10 @@
 
 @use "./partner/partner" as partner;
 @use "./hero/home" as hero;
-@use "./topdestinasi/topdestinasi" as destinasi;
+@use "./benefit/benefit" as benefit;
 
 .home {
-  padding: v.$padding-horizontal-main;
+  padding: v.$padding-vertical-main v.$padding-horizontal-main;
 
   .hero {
     @include hero.hero();
@@ -14,8 +14,7 @@
   .partner {
     @include partner.partners();
   }
-
-  .destinasi{
-    @include destinasi.destinasi();
+  .benefit{
+    @include benefit.benefit();
   }
 }
