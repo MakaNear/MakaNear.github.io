@@ -4,6 +4,9 @@
 @use "./partner/partner" as partner;
 @use "./hero/home" as hero;
 @use "./benefit/benefit" as benefit;
+@use "./tim/tim" as tim;
+@use "./information/information" as information;
+@use "./faq/faq" as faq;
 
 .home {
   padding: v.$padding-vertical-main v.$padding-horizontal-main;
@@ -16,5 +19,14 @@
   }
   .benefit{
     @include benefit.benefit();
+  }
+  .tim{
+    @include tim.tim();
+  }
+  .information{
+    @include information.information();
+  }
+  .faq{
+    @include faq.faq();
   }
 }
