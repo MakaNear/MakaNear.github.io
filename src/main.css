@@ -581,8 +581,7 @@
   align-items: center;
 }
 .home .faq .faq-section .faq-items .faq-item .faq-question .faq-toggle {
-  background-color: #007bff;
-  color: #fff;
+  color: #34a0a4;
   border: none;
   border-radius: 50%;
   width: 30px;
@@ -595,19 +594,18 @@
   transition: all 0.3s;
 }
 .home .faq .faq-section .faq-items .faq-item .faq-question .faq-toggle:hover {
-  background-color: #0056b3;
   transform: scale(1.1);
 }
 .home .faq .faq-section .faq-items .faq-item .faq-answer {
   font-size: 1rem;
   color: #666;
   margin-top: 0.5rem;
-  overflow: hidden; /* Penting untuk animasi */
-  max-height: 0; /* Default tertutup */
-  transition: max-height 0.3s ease; /* Animasi */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
 }
 .home .faq .faq-section .faq-items .faq-item.active .faq-answer {
-  max-height: 500px; /* Tinggi maksimum saat aktif */
+  max-height: 500px;
 }
 
 *,

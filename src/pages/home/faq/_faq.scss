@@ -68,8 +68,7 @@
           align-items: center;
 
           .faq-toggle {
-            background-color: #007bff;
-            color: #fff;
+            color: map-get($map: v.$color, $key: "light-cyan");
             border: none;
             border-radius: 50%;
             width: 30px;
@@ -82,7 +81,6 @@
             transition: all 0.3s;
 
             &:hover {
-              background-color: #0056b3;
               transform: scale(1.1);
             }
           }
@@ -92,13 +90,13 @@
           font-size: 1rem;
           color: #666;
           margin-top: 0.5rem;
-          overflow: hidden; /* Penting untuk animasi */
-          max-height: 0; /* Default tertutup */
-          transition: max-height 0.3s ease; /* Animasi */
+          overflow: hidden;
+          max-height: 0;
+          transition: max-height 0.3s ease;
         }
 
         &.active .faq-answer {
-          max-height: 500px; /* Tinggi maksimum saat aktif */
+          max-height: 500px;
         }
       }
     }
