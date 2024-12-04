@@ -246,7 +246,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: nowrap;
   border-radius: 12px;
+}
+.home .hero .template-wireframe .image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.home .hero .template-wireframe .image-section img {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 20px;
 }
 .home .hero .template-wireframe .text-section {
   flex: 1;
@@ -271,19 +284,40 @@
 .home .hero .template-wireframe .text-section p a:hover {
   text-decoration: underline;
 }
-.home .hero .template-wireframe .image-section {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
+@media (max-width: 768px) {
+  .home .hero .template-wireframe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .hero .template-wireframe .image-section {
+    order: -1;
+    padding: 1rem 0;
+  }
+  .home .hero .template-wireframe .image-section img {
+    width: 100%;
+    max-width: none;
+  }
+  .home .hero .template-wireframe .text-section {
+    text-align: center;
+    padding: 1rem;
+  }
+  .home .hero .template-wireframe .text-section h2 {
+    font-size: 1.8rem;
+  }
+  .home .hero .template-wireframe .text-section p {
+    font-size: 0.9rem;
+  }
 }
-.home .hero .template-wireframe .image-section img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 95%;
-  border-radius: 20px;
+@media (max-width: 768px) and (max-width: 480px) {
+  .home .hero .template-wireframe .image-section img {
+    border-radius: 10px;
+  }
+  .home .hero .template-wireframe .text-section h2 {
+    font-size: 1.5rem;
+  }
+  .home .hero .template-wireframe .text-section p {
+    font-size: 0.8rem;
+  }
 }
 .home .partner {
   text-align: center;
