@@ -17,11 +17,6 @@ export async function navbar() {
   if (logoutButton) {
     if (loginCookie) {
       logoutButton.style.display = "inline-block";
-      Swal.fire({
-        title: "Logout",
-        text: "You have successfully logged out!",
-        icon: "success",
-      });
       loginButton.style.display = "none";
     } else {
       logoutButton.style.display = "none";
@@ -29,9 +24,18 @@ export async function navbar() {
     }
 
     // ----- Logout ----- //
-    logoutButton.addEventListener("click", () => {
-      window.Cookies.remove("login"); // Use window.Cookies to remove cookie
-      window.location.href = "/login";
+    logoutButton.addEventListener("click", (event) => {
+      event.preventDefault(); 
+      Swal.fire({
+        title: "Logout",
+        text: "You have successfully logged out!",
+        icon: "success",
+        showConfirmButton: false,
+        timer: 2000, // Show alert for 2 seconds
+      }).then(() => {
+        window.Cookies.remove("login"); // Use window.Cookies to remove cookie
+        window.location.href = "/login"; // Redirect after SweetAlert closes
+      });
     });
   }
 }
