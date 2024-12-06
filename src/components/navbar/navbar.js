@@ -27,14 +27,27 @@ export async function navbar() {
     logoutButton.addEventListener("click", (event) => {
       event.preventDefault(); 
       Swal.fire({
-        title: "Logout",
-        text: "You have successfully logged out!",
-        icon: "success",
-        showConfirmButton: false,
-        timer: 2000, // Show alert for 2 seconds
-      }).then(() => {
-        window.Cookies.remove("login"); // Use window.Cookies to remove cookie
-        window.location.href = "/login"; // Redirect after SweetAlert closes
+        title: "Logout Confirmation",
+        text: "Are you sure you want to log out?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, log out!",
+        cancelButtonText: "Cancel",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Logged Out!",
+            text: "You have successfully logged out.",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2000, // Show alert for 2 seconds
+          }).then(() => {
+            window.Cookies.remove("login"); // Remove login cookie
+            window.location.href = "/login"; // Redirect to login page
+          });
+        }
       });
     });
   }
