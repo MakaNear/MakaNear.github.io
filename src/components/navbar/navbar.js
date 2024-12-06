@@ -17,6 +17,11 @@ export async function navbar() {
   if (logoutButton) {
     if (loginCookie) {
       logoutButton.style.display = "inline-block";
+      Swal.fire({
+        title: "Logout",
+        text: "You have successfully logged out!",
+        icon: "success",
+      });
       loginButton.style.display = "none";
     } else {
       logoutButton.style.display = "none";
